@@ -1,0 +1,16 @@
+torch==2.5.1
+transformers==4.49.0
+tensorflow==2.21.0
+sentence-transformers==3.4.1
+scikit-learn==1.7.2
+joblib==1.5.3
+numpy==1.26.4
+scipy==1.16.3
+boto3[crt]==1.43.89
+pandas==3.0.5
+pyarrow==25.0.1
+Pillow==12.3.0
+pytesseract==0.3.13
+fastapi==0.141.1
+uvicorn==0.52.4
+python-multipart==0.0.32

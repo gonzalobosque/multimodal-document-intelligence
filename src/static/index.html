@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Multimodal Document Intelligence</title>
+
+    <link rel="stylesheet" href="/static/style.css?v=1.0.0">
+</head>
+
+<body>
+    <main>
+        <header class="page-header">
+            <h1>Multimodal Document Intelligence</h1>
+
+            <p class="subtitle">
+                Master's Thesis project for multimodal document classification
+                and semantic retrieval.
+            </p>
+        </header>
+
+        <section>
+            <h2>Classify a document</h2>
+
+            <p>
+                Upload a TIFF document to run OCR and multimodal classification.
+            </p>
+
+            <form id="classify-form" enctype="multipart/form-data">
+                <label for="document-file">Document</label>
+
+                <input
+                    id="document-file"
+                    type="file"
+                    name="file"
+                    accept=".tif,.tiff,image/tiff"
+                    required
+                >
+
+                <button type="submit">
+                    Classify
+                </button>
+            </form>
+
+            <div
+                id="classification-result"
+                class="result"
+                aria-live="polite"
+            ></div>
+        </section>
+
+        <section>
+            <h2>Search documents</h2>
+
+            <p>
+                Search the catalog semantically, or filter by class using
+                <code>(class) query</code>.
+            </p>
+
+            <form id="search-form">
+                <label for="search-query">Query</label>
+
+                <input
+                    id="search-query"
+                    type="text"
+                    name="query"
+                    placeholder="e.g. annual sales report"
+                    required
+                >
+
+                <button type="submit">
+                    Search
+                </button>
+            </form>
+
+            <div
+                id="search-results"
+                class="result"
+                aria-live="polite"
+            ></div>
+        </section>
+    </main>
+
+    <script src="/static/app.js?v=1.0.0"></script>
+</body>
+</html>

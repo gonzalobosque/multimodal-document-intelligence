@@ -1,0 +1,36 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+
+# Local IDE settings
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment variables and local secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data and trained artifacts
+data/
+assets/bge-small-en-v1.5/
+
+# Model and generated data files
+*.keras
+*.joblib
+*.parquet
+*.tar.gz
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing and tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Logs
+*.log

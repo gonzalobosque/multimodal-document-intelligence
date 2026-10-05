@@ -1,0 +1,33 @@
+# Git
+.git
+.gitignore
+
+# Python
+.venv
+__pycache__
+*.pyc
+
+# Local system and IDE files
+.DS_Store
+.vscode
+
+# Environment files
+.env
+.env.*
+
+# Runtime data and model artifacts
+data
+assets
+
+# Portfolio and academic documentation
+docs
+notebooks
+*.ipynb
+
+# Tooling caches
+.pytest_cache
+.ruff_cache
+.mypy_cache
+
+# Logs
+*.log
