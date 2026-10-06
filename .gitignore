@@ -17,6 +17,7 @@ __pycache__/
 # Runtime data and trained artifacts
 data/
 assets/bge-small-en-v1.5/
+hf_artifacts/
 
 # Model and generated data files
 *.keras
