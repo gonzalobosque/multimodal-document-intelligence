@@ -164,7 +164,7 @@ These are implementation contracts rather than configurable defaults: changing t
 
 Large model files and generated data are excluded from Git history.
 
-A checksum-verified copy of the trained classifier artifacts is maintained separately on Hugging Face under `gonzalobosque/multimodal-document-intelligence`. The model repository is currently private while the final licensing and provenance review is completed.
+A checksum-verified copy of the trained classifier artifacts is available on Hugging Face at [gonzalobosque/multimodal-document-intelligence](https://huggingface.co/gonzalobosque/multimodal-document-intelligence).
 
 The original semantic catalogue is not distributed because it contains dataset-derived OCR content. It is not required to start the application: when `documents.parquet` is absent, the application starts with an empty catalogue and creates one when the first document is uploaded.
 
@@ -177,7 +177,7 @@ git clone https://github.com/gonzalobosque/multimodal-document-intelligence.git
 cd multimodal-document-intelligence
 ```
 
-Place the trained classifier artifacts under `data/` using the structure shown above. The verified artifact bundle is maintained separately on Hugging Face under `gonzalobosque/multimodal-document-intelligence`.
+Place the trained classifier artifacts under `data/` using the structure shown above. The verified artifact bundle is maintained separately on Hugging Face under [gonzalobosque/multimodal-document-intelligence](https://huggingface.co/gonzalobosque/multimodal-document-intelligence).
 
 The semantic catalogue is optional for startup. If `data/documents.parquet` is not present, the application starts with an empty catalogue and creates the file after the first successful document upload.
 
