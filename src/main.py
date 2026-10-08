@@ -142,7 +142,6 @@ def _prepare_artifacts() -> None:
         IMAGE_MODEL_DIR / "model.keras",
         FUSION_MODEL_PATH,
         CLASS_ORDER_PATH,
-        CATALOG_PATH,
     )
 
     missing_artifacts = [

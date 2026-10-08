@@ -41,7 +41,6 @@ for required_path in (
     IMAGE_MODEL_PATH,
     FUSION_MODEL_PATH,
     CLASS_ORDER_PATH,
-    CATALOG_PATH,
 ):
     _require_path(required_path)
 
@@ -69,10 +68,34 @@ with CLASS_ORDER_PATH.open(encoding="utf-8") as class_file:
 # The embedding model is downloaded and cached automatically when necessary.
 embedding_model = SentenceTransformer(EMBEDDING_MODEL_ID)
 
-catalog = pd.read_parquet(CATALOG_PATH)
+if CATALOG_PATH.exists():
+    catalog = pd.read_parquet(CATALOG_PATH)
+else:
+    catalog = pd.DataFrame(
+        columns=[
+            "document_id",
+            "filename",
+            "source_path",
+            "s3_key",
+            "text",
+            "label_name",
+            "predicted_class",
+            "confidence",
+            "embedding",
+        ]
+    )
 
 # Catalog rows and embedding rows must always remain aligned.
-embeddings = np.stack(catalog["embedding"].to_numpy())
+if len(catalog) > 0:
+    embeddings = np.stack(catalog["embedding"].to_numpy())
+else:
+    embeddings = np.empty(
+        (
+            0,
+            embedding_model.get_sentence_embedding_dimension(),
+        ),
+        dtype=np.float32,
+    )
 
 
 def classify_document(
