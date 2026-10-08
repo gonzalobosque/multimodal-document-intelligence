@@ -301,6 +301,12 @@ Current work focuses on:
 - improving testing and deployment reproducibility;
 - evaluating the system on documents outside the original training domain.
 
+## License
+
+The original source code in this repository is licensed under the [Apache License 2.0](LICENSE).
+
+This license applies to the source code authored for this project. It does not grant rights to third-party datasets, pretrained model weights, dataset-derived content, trained model artifacts, or academic documents that may be subject to separate terms.
+
 ## Author
 
 **Gonzalo Bosque Rodríguez**<br>
