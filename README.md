@@ -162,9 +162,11 @@ Several contracts must remain unchanged because the inference pipeline is intend
 
 These are implementation contracts rather than configurable defaults: changing them would require validating the models again.
 
-Large model files and generated data are excluded through `.gitignore`.
+Large model files and generated data are excluded from Git history.
 
-Public distribution of the trained models and derived catalogue is being handled separately so that model and dataset licensing and provenance can be checked before those artifacts are published.
+A checksum-verified copy of the trained classifier artifacts is maintained separately on Hugging Face under `gonzalobosque/multimodal-document-intelligence`. The model repository is currently private while the final licensing and provenance review is completed.
+
+The original semantic catalogue is not distributed because it contains dataset-derived OCR content. It is not required to start the application: when `documents.parquet` is absent, the application starts with an empty catalogue and creates one when the first document is uploaded.
 
 ## Installation
 
@@ -175,7 +177,9 @@ git clone https://github.com/gonzalobosque/multimodal-document-intelligence.git
 cd multimodal-document-intelligence
 ```
 
-Place the required trained artifacts under `data/` using the structure shown above.
+Place the trained classifier artifacts under `data/` using the structure shown above. The verified artifact bundle is maintained separately on Hugging Face under `gonzalobosque/multimodal-document-intelligence`.
+
+The semantic catalogue is optional for startup. If `data/documents.parquet` is not present, the application starts with an empty catalogue and creates the file after the first successful document upload.
 
 No manual Python environment is required for the Docker workflow.
 
