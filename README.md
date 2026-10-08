@@ -115,7 +115,7 @@ You need:
 
 - **Git**
 - **Docker Desktop** or another compatible Docker runtime
-- the trained model artifacts and semantic catalogue described below
+- the trained model artifacts described below
 - an internet connection when building the image for the first time
 
 Tesseract OCR and the Python runtime dependencies are installed inside the Docker image, so they do not need to be configured separately on the host system.
@@ -285,7 +285,7 @@ This project should be interpreted according to the scope in which it was evalua
 - Semantic retrieval was evaluated through **qualitative tests**, so similarity scores should not be interpreted as calibrated probabilities of relevance.
 - OCR errors can propagate into both text classification and semantic retrieval.
 - The current application is an **academic prototype**, not a production document-management platform.
-- Public distribution of trained artifacts and derived data still requires a final review of their respective licences and provenance.
+- The original semantic catalogue is not publicly distributed because it contains dataset-derived OCR content.
 
 One of the most interesting next steps is therefore to evaluate the system on more recent, out-of-domain documents and determine which parts of the learned representations transfer successfully beyond RVL-CDIP.
 
